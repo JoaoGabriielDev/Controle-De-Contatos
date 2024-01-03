@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.SqlServer;
 
 var builder = WebApplication.CreateBuilder(args);
 
-var connectionString = "Server=DESKTOP-FQIJ08P\\SQLEXPRESS;Database=DB_Sistema;User Id=DESKTOP-FQIJ08P\\João Gabriel;Password=";
+var connectionString = "Server=DESKTOP-FQIJ08P\\SQLEXPRESS;Database=DB_Sistema;User Id=DESKTOP-FQIJ08P\\João Gabriel;Password=23198443;Trusted_Connection=True;Encrypt=False";
 builder.Services.AddDbContext<BancoContext>(options =>
     options.UseSqlServer(connectionString));
 
