@@ -3,26 +3,59 @@
     ViewData["Title"] = "Criar de Contato";
 }
 
-<div class="text-center">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .form-container {
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 10px;
+            width: 500px; 
+            margin-top: 160px;
+            margin-left: 300px;
+        }
+    </style>
+</head>
+<body>
 
-<h1 class="display-4">Cadastrar Contato</h1>
+    <div class="form-container">
+        <div class="text-center">
+            <h1 class="display-4">Cadastrar Contato</h1>
+        </div>
 
-</div>
+        <form asp-controller="Contato" asp-action="Criar" method="post">
+            <div class="mb-3">
+                <label for="nome" class="form-label">Nome</label>
+                <input type="text" asp-for="Nome" class="form-control" placeholder="Digite o nome do Contato">
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="text" asp-for="Email" class="form-control" placeholder="Digite o email do Contato">
+            </div>
+            <div class="mb-3">
+                <label for="celular" class="form-label">Celular</label>
+                <input type="text" asp-for="Celular" class="form-control" placeholder="Digite o número do Contato">
+            </div>
 
-<form asp-controller="Contato" asp-action="Criar" method="post">
-  <div class="mb-3">
-    <label for="nome" class="form-label">Nome</label>
-    <input type="text" asp-for="Nome" class="form-control" placeholder="Digite o nome do Contato">
-  </div>
-  <div class="mb-3">
-    <label for="email" class="form-label">Email</label>
-    <input type="text" asp-for="Email" class="form-control" placeholder="Digite o email do Contato">
-  </div>
-    <div class="mb-3">
-    <label for="celular" class="form-label">Celular</label>
-    <input type="text" asp-for="Celular" class="form-control" placeholder="Digite o número do Contato">
-  </div>
+            <div class="text-center">
+            <button type="submit" class="btn btn-primary">Adicionar Contato</button>
+            <a class="btn btn-danger" asp-controller="Contato" asp-action="Index" role="button">Voltar</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
 
-  <button type="submit" class="btn btn-primary">Adicionar Contato</button>
-  <a class="btn btn-danger" asp-controller="Contato" asp-action="Index" role="button">Voltar</a>
-</form>
+
+

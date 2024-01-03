@@ -2,10 +2,28 @@
 /* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
+body[b-np6767stkz] {
+  margin: 0;
+  padding: 0;
+}
+
+header[b-np6767stkz] {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navbar[b-np6767stkz]
+{
+ width: 100%;
+}
+
 a.navbar-brand[b-np6767stkz] {
   white-space: normal;
   text-align: center;
   word-break: break-all;
+  width: 100%;
 }
 
 a[b-np6767stkz] {
